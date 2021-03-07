@@ -7,12 +7,13 @@ interface EmailStepProps {
 const EmailStep: React.FC<EmailStepProps> = (props) => {
   const [email, setEmail] = useState("");
   const checkEmailInput = () => {
-    //Check for the Name TextInput
+    //Check if email id is not blank
     if (!email.trim()) {
       alert("Please Enter Email");
       //console.warn("Please Enter First Name:");
       return;
     }
+    //Check if email id entered is in proper format
     const regexp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!regexp.test(email)) {
       alert("Email ID entered not in correct format");

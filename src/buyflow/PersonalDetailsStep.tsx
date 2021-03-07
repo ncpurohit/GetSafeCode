@@ -26,22 +26,6 @@ const PersonalDetailsStep: React.FC<PersonalDetailsProps> = (props) => {
       /\d+/g.test(fname)
     ) {
       alert("First name must contain only Alphabets");
-
-      const createTwoButtonAlert = () =>
-        Alert.alert(
-          "Alert Title",
-          "My Alert Msg",
-          [
-            {
-              text: "Cancel",
-              onPress: () => console.log("Cancel Pressed"),
-              style: "cancel"
-            },
-            { text: "OK", onPress: () => console.log("OK Pressed") }
-          ],
-          { cancelable: false }
-        );
-
       return;
     }
 
@@ -101,9 +85,7 @@ const PersonalDetailsStep: React.FC<PersonalDetailsProps> = (props) => {
       >
         Next
       </button>
-      <div>
-        <text style={{ fontSize: 12 }}>(* Mandatory Fields)</text>
-      </div>
+      <div style={{ fontSize: 12 }}>(* Mandatory Fields)</div>
     </>
   );
 };
